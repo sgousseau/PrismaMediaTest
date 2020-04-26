@@ -19,15 +19,15 @@ class UserManager {
         case user = "user_storage_key"
     }
     
-    var user: User?
+    var user: User!
     
     init() {
         load()
     }
     
-    func get(completion: @escaping (User) -> Void, error: ((Error) -> Void)? = nil) {
-        if let user = user {
-            completion(user)
+    func getUser(done: @escaping () -> Void, error: ((Error) -> Void)? = nil) {
+        if user != nil {
+            done()
             return
         }
         
@@ -36,17 +36,21 @@ class UserManager {
             case .success(let response):
                 self.user = response.data
                 self.save()
-                completion(self.user!)
+                done()
             case .failure(let err):
                 error?(err)
             }
         }
     }
     
+    func updateUser(firstName: String, lastName: String) {
+        user.firstName = firstName
+        user.lastName = lastName
+        save()
+    }
+    
     private func save() {
-        if let user = user {
-            storage.save(encodable: user, key: Keys.user.rawValue)
-        }
+        storage.save(encodable: user, key: Keys.user.rawValue)
     }
     
     private func load() {

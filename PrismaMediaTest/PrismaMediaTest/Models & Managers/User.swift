@@ -14,6 +14,10 @@ struct User: Codable {
     var email: String
     var avatarUrlString: String
     
+    var fullName: String {
+        return firstName + " " + lastName
+    }
+    
     enum CodingKeys: String, CodingKey {
         case firstName = "first_name"
         case lastName = "last_name"
