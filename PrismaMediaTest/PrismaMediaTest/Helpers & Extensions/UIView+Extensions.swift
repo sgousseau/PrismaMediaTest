@@ -11,6 +11,10 @@ import Foundation
 import UIKit
 
 extension UIView {
+    
+    /*
+     Effet de fondu
+     */
     func fade(duration: TimeInterval = 0.3) -> Self {
         self.layer.fade(duration: duration)
         return self

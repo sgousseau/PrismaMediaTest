@@ -11,6 +11,10 @@ import Foundation
 import UIKit
 
 extension CALayer {
+    
+    /*
+    Effet de fondu
+    */
     func fade(duration: TimeInterval) {
         let transition: CATransition = CATransition()
         transition.duration = duration

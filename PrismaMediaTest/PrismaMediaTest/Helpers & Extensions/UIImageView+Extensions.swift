@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 extension UIImageView {
+    
+    /*
+     Permet d'afficher une image en ligne
+     */
     func load(_ urlString: String) {
         DispatchQueue.global().async { [weak self] in
             if let url = urlString.toURL(), let data = try? Data(contentsOf: url) {

@@ -9,6 +9,10 @@
 import Foundation
 
 extension String {
+    
+    /*
+     Convertit cette chaîne en URL
+     */
     func toURL() -> URL? {
         return URL(string: self)
     }
