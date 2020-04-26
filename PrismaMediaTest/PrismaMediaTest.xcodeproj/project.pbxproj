@@ -14,6 +14,8 @@
 		5C25EE272455DDD5004F12C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C25EE262455DDD5004F12C6 /* Assets.xcassets */; };
 		5C25EE2A2455DDD5004F12C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C25EE282455DDD5004F12C6 /* LaunchScreen.storyboard */; };
 		5C25EE352455DDD5004F12C6 /* PrismaMediaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE342455DDD5004F12C6 /* PrismaMediaTestTests.swift */; };
+		5C25EE442455E3EA004F12C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE432455E3EA004F12C6 /* User.swift */; };
+		5C25EE462455E4FC004F12C6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE452455E4FC004F12C6 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		5C25EE302455DDD5004F12C6 /* PrismaMediaTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrismaMediaTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C25EE342455DDD5004F12C6 /* PrismaMediaTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrismaMediaTestTests.swift; sourceTree = "<group>"; };
 		5C25EE362455DDD5004F12C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C25EE432455E3EA004F12C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5C25EE452455E4FC004F12C6 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 				5C25EE412455DEA0004F12C6 /* Utils & Extensions */,
 				5C25EE402455DE94004F12C6 /* Models & Managers */,
 				5C25EE422455DF0C004F12C6 /* Resources */,
+				5C25EE2B2455DDD5004F12C6 /* Info.plist */,
 			);
 			path = PrismaMediaTest;
 			sourceTree = "<group>";
@@ -111,6 +116,8 @@
 		5C25EE402455DE94004F12C6 /* Models & Managers */ = {
 			isa = PBXGroup;
 			children = (
+				5C25EE432455E3EA004F12C6 /* User.swift */,
+				5C25EE452455E4FC004F12C6 /* UserManager.swift */,
 			);
 			path = "Models & Managers";
 			sourceTree = "<group>";
@@ -126,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				5C25EE262455DDD5004F12C6 /* Assets.xcassets */,
-				5C25EE2B2455DDD5004F12C6 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -232,8 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C25EE442455E3EA004F12C6 /* User.swift in Sources */,
 				5C25EE222455DDD3004F12C6 /* ViewController.swift in Sources */,
 				5C25EE1E2455DDD3004F12C6 /* AppDelegate.swift in Sources */,
+				5C25EE462455E4FC004F12C6 /* UserManager.swift in Sources */,
 				5C25EE202455DDD3004F12C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
