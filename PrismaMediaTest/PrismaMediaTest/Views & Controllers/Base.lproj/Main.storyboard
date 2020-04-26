@@ -21,6 +21,11 @@
                                     <constraint firstAttribute="height" constant="170" id="656-qK-CSc"/>
                                     <constraint firstAttribute="width" constant="170" id="OOs-Bt-2MU"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzU-l1-Aqr">
                                 <rect key="frame" x="188.5" y="510.5" width="37.5" height="18"/>
@@ -29,8 +34,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeE-AP-J1Y">
-                                <rect key="frame" x="178.5" y="632" width="57" height="30"/>
-                                <state key="normal" title="Modifier"/>
+                                <rect key="frame" x="122" y="622" width="170" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QPE-5M-TkG"/>
+                                    <constraint firstAttribute="width" constant="170" id="rdg-BL-cWD"/>
+                                </constraints>
+                                <state key="normal" title="Modifier">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="XnC-Bo-X5W" kind="show" id="O3T-Ir-98C"/>
                                 </connections>
@@ -73,13 +85,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLn-7x-rIk">
-                                <rect key="frame" x="183.5" y="578" width="47" height="30"/>
-                                <state key="normal" title="Valider"/>
-                                <connections>
-                                    <segue destination="EYl-bC-VS6" kind="unwind" unwindAction="unwindWithSegue:" id="Uyv-dC-VPZ"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74R-28-b2X">
                                 <rect key="frame" x="60" y="200" width="294" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -90,17 +95,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHl-JN-fku">
+                                <rect key="frame" x="122" y="568" width="170" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="HaL-Mu-Kik"/>
+                                    <constraint firstAttribute="height" constant="40" id="nmT-cI-jp2"/>
+                                </constraints>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EYl-bC-VS6" kind="unwind" unwindAction="unwindWithSegue:" id="djM-dn-jm3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="74R-28-b2X" firstAttribute="top" secondItem="ZZP-y8-wrM" secondAttribute="top" constant="200" id="0dv-Pz-Fjf"/>
                             <constraint firstItem="erB-fc-qli" firstAttribute="leading" secondItem="ZZP-y8-wrM" secondAttribute="leading" constant="60" id="6vZ-Bg-BD6"/>
                             <constraint firstItem="ZZP-y8-wrM" firstAttribute="trailing" secondItem="erB-fc-qli" secondAttribute="trailing" constant="60" id="C2Y-Ge-MeS"/>
+                            <constraint firstItem="YHl-JN-fku" firstAttribute="centerX" secondItem="mEs-43-XWH" secondAttribute="centerX" id="GxM-57-Mz3"/>
+                            <constraint firstItem="ZZP-y8-wrM" firstAttribute="bottom" secondItem="YHl-JN-fku" secondAttribute="bottom" constant="200" id="Xw3-K1-CaX"/>
                             <constraint firstItem="74R-28-b2X" firstAttribute="leading" secondItem="ZZP-y8-wrM" secondAttribute="leading" constant="60" id="ZL0-PY-0gv"/>
                             <constraint firstItem="ZZP-y8-wrM" firstAttribute="trailing" secondItem="74R-28-b2X" secondAttribute="trailing" constant="60" id="bue-ah-PN0"/>
-                            <constraint firstItem="ZZP-y8-wrM" firstAttribute="bottom" secondItem="cLn-7x-rIk" secondAttribute="bottom" constant="200" id="dSo-m7-e4b"/>
                             <constraint firstItem="erB-fc-qli" firstAttribute="top" secondItem="74R-28-b2X" secondAttribute="bottom" constant="30" id="hRD-65-q5P"/>
-                            <constraint firstItem="cLn-7x-rIk" firstAttribute="centerX" secondItem="mEs-43-XWH" secondAttribute="centerX" id="tdt-q3-rjN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZZP-y8-wrM"/>
                     </view>

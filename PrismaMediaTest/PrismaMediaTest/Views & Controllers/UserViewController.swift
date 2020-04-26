@@ -25,8 +25,9 @@ class UserViewController: UIViewController {
     }
     
     func refresh() {
-        nameLabel.text = userManager.user.fullName
-        emailLabel.text = userManager.user.email
+        nameLabel.fade().text = userManager.user.fullName
+        emailLabel.fade().text = userManager.user.email
+        avatarImageView.load(userManager.user.avatarUrlString)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

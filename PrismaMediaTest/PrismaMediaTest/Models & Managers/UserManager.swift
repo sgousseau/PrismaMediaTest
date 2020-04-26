@@ -44,8 +44,8 @@ class UserManager {
     }
     
     func updateUser(firstName: String, lastName: String) {
-        user.firstName = firstName
-        user.lastName = lastName
+        user.firstName = firstName.isEmpty ? user.firstName : firstName
+        user.lastName = lastName.isEmpty ? user.lastName : lastName
         save()
     }
     

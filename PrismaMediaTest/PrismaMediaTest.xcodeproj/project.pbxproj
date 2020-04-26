@@ -23,6 +23,9 @@
 		5C25EE542455F4BF004F12C6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE532455F4BF004F12C6 /* UserViewController.swift */; };
 		5C25EE562455F4CC004F12C6 /* UserModificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE552455F4CC004F12C6 /* UserModificationViewController.swift */; };
 		5C25EE582455FF7A004F12C6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE572455FF7A004F12C6 /* UIViewController+Extensions.swift */; };
+		5C25EE5C24560164004F12C6 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE5B24560164004F12C6 /* UIImageView+Extensions.swift */; };
+		5C25EE5E24560213004F12C6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE5D24560213004F12C6 /* UIView+Extensions.swift */; };
+		5C25EE6024560237004F12C6 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE5F24560237004F12C6 /* CALayer+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		5C25EE532455F4BF004F12C6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		5C25EE552455F4CC004F12C6 /* UserModificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModificationViewController.swift; sourceTree = "<group>"; };
 		5C25EE572455FF7A004F12C6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		5C25EE5B24560164004F12C6 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		5C25EE5D24560213004F12C6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		5C25EE5F24560237004F12C6 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,9 @@
 			children = (
 				5C25EE4F2455E83C004F12C6 /* Strings+Extensions.swift */,
 				5C25EE572455FF7A004F12C6 /* UIViewController+Extensions.swift */,
+				5C25EE5B24560164004F12C6 /* UIImageView+Extensions.swift */,
+				5C25EE5D24560213004F12C6 /* UIView+Extensions.swift */,
+				5C25EE5F24560237004F12C6 /* CALayer+Extensions.swift */,
 			);
 			path = "Helpers & Extensions";
 			sourceTree = "<group>";
@@ -267,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C25EE5E24560213004F12C6 /* UIView+Extensions.swift in Sources */,
+				5C25EE5C24560164004F12C6 /* UIImageView+Extensions.swift in Sources */,
 				5C25EE4E2455E6E6004F12C6 /* ServiceError.swift in Sources */,
 				5C25EE522455F0E2004F12C6 /* NetworkResponse.swift in Sources */,
 				5C25EE442455E3EA004F12C6 /* User.swift in Sources */,
@@ -277,6 +288,7 @@
 				5C25EE462455E4FC004F12C6 /* UserManager.swift in Sources */,
 				5C25EE4A2455E6C6004F12C6 /* NetworkService.swift in Sources */,
 				5C25EE202455DDD3004F12C6 /* SceneDelegate.swift in Sources */,
+				5C25EE6024560237004F12C6 /* CALayer+Extensions.swift in Sources */,
 				5C25EE4C2455E6D1004F12C6 /* StorageService.swift in Sources */,
 				5C25EE562455F4CC004F12C6 /* UserModificationViewController.swift in Sources */,
 			);
