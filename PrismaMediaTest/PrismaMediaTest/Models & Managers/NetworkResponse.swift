@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class NetworkResponse<T: Decodable>: Decodable {
+    let data: T
+    
+    enum CodingKeys: String, CodingKey {
+        case data
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        data = try container.decode(T.self, forKey: CodingKeys.data)
+    }
+}

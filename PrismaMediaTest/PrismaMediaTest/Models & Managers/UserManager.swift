@@ -9,16 +9,47 @@
 import Foundation
 
 /*
- UserManager est la classe en charge de la gestion du téléchargement, sauvegarde et chargement, de l'ensemble des fonctionnalités et intéractions  relatives aux données utilisateur
+ UserManager est la classe en charge de la gestion du téléchargement, sauvegarde et chargement relatives aux données utilisateur
  */
 class UserManager {
-    var user: User
+    let network = DefaultNetworkService()
+    let storage = DefaultStorageService()
     
-    init() {
-        user = User(firstName: "", lastName: "", avatarUrlString: "")
+    enum Keys: String {
+        case user = "user_storage_key"
     }
     
-    func get(completion: (User) -> Void) {
-        completion(user)
+    var user: User?
+    
+    init() {
+        load()
+    }
+    
+    func get(completion: @escaping (User) -> Void, error: ((Error) -> Void)? = nil) {
+        if let user = user {
+            completion(user)
+            return
+        }
+        
+        network.get(NetworkResponse<User>.self, route: "https://reqres.in/api/users/1") { (result) in
+            switch result {
+            case .success(let response):
+                self.user = response.data
+                self.save()
+                completion(self.user!)
+            case .failure(let err):
+                error?(err)
+            }
+        }
+    }
+    
+    private func save() {
+        if let user = user {
+            storage.save(encodable: user, key: Keys.user.rawValue)
+        }
+    }
+    
+    private func load() {
+        user = storage.load(key: Keys.user.rawValue)
     }
 }

@@ -12,23 +12,33 @@ import XCTest
 class PrismaMediaTestTests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testApiAndStorage() {
+        let exp = expectation(description: "exp")
+        
+        var manager = UserManager()
+        var user: User?
+        
+        manager.get(completion: { (result) in
+            user = result
+            exp.fulfill()
+        })
+        
+        wait(for: [exp], timeout: 5.0)
+        XCTAssertNotNil(user)
+        
+        manager = UserManager()
+        XCTAssertNotNil(manager.user)
+        XCTAssertTrue(user! == manager.user!)
     }
+}
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+extension User: Equatable {
+    public static func ==(lhs: User, rhs: User) -> Bool {
+        return lhs.firstName == rhs.firstName && lhs.lastName == rhs.lastName
     }
-
 }
