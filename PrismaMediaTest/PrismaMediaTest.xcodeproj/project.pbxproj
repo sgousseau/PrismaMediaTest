@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5C25EE1E2455DDD3004F12C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE1D2455DDD3004F12C6 /* AppDelegate.swift */; };
-		5C25EE202455DDD3004F12C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25EE1F2455DDD3004F12C6 /* SceneDelegate.swift */; };
 		5C25EE252455DDD3004F12C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C25EE232455DDD3004F12C6 /* Main.storyboard */; };
 		5C25EE272455DDD5004F12C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C25EE262455DDD5004F12C6 /* Assets.xcassets */; };
 		5C25EE2A2455DDD5004F12C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C25EE282455DDD5004F12C6 /* LaunchScreen.storyboard */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		5C25EE1A2455DDD3004F12C6 /* PrismaMediaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrismaMediaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C25EE1D2455DDD3004F12C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C25EE1F2455DDD3004F12C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5C25EE242455DDD3004F12C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C25EE262455DDD5004F12C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C25EE292455DDD5004F12C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				5C25EE1D2455DDD3004F12C6 /* AppDelegate.swift */,
-				5C25EE1F2455DDD3004F12C6 /* SceneDelegate.swift */,
 				5C25EE3F2455DE8A004F12C6 /* Views & Controllers */,
 				5C25EE402455DE94004F12C6 /* Models & Managers */,
 				5C25EE482455E688004F12C6 /* Services */,
@@ -287,7 +284,6 @@
 				5C25EE1E2455DDD3004F12C6 /* AppDelegate.swift in Sources */,
 				5C25EE462455E4FC004F12C6 /* UserManager.swift in Sources */,
 				5C25EE4A2455E6C6004F12C6 /* NetworkService.swift in Sources */,
-				5C25EE202455DDD3004F12C6 /* SceneDelegate.swift in Sources */,
 				5C25EE6024560237004F12C6 /* CALayer+Extensions.swift in Sources */,
 				5C25EE4C2455E6D1004F12C6 /* StorageService.swift in Sources */,
 				5C25EE562455F4CC004F12C6 /* UserModificationViewController.swift in Sources */,
@@ -382,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -436,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
