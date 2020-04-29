@@ -20,7 +20,9 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
         
         userManager.getUser(done: { [unowned self] in
-            self.refresh()
+            DispatchQueue.main.async {
+                self.refresh()
+            }
         })
     }
     
